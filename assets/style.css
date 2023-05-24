@@ -1,0 +1,261 @@
+/*css for Result Summary Component */
+
+
+:root {
+
+    /* ### Primary */
+    --Light_red_bg: hsl(0, 100%, 67%, 0.04);
+    --Orangey_yellow_bg: hsl(39, 100%, 56%, 0.04);
+    --Green_teal_bg: hsl(166, 100%, 37%, 0.04);
+    --Cobalt_blue_bg: hsl(234, 85%, 45%, 0.04);
+    --Light_red: hsl(0, 100%, 67%);
+    --Orangey_yellow: hsl(39, 100%, 56%);
+    --Green_teal: hsl(166, 100%, 37%);
+    --Cobalt_blue: hsl(234, 85%, 45%);
+
+    /* ## Gradients */
+
+    --Light_slate_blue_background: hsl(252, 100%, 67%);
+    --Light_royal_blue_background: hsl(241, 81%, 54%);
+    --Violet_blue_circle: hsla(256, 72%, 46%, 1);
+    --Persian_blue_circle: hsla(241, 72%, 46%, 0);
+
+
+    /* 
+### Neutral
+ */
+    --White: hsl(0, 0%, 100%);
+    --Pale_blue: hsl(221, 100%, 96%);
+    --Light_lavender: hsl(241, 100%, 89%);
+    --Dark_gray_blue: hsl(224, 30%, 27%);
+
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: border-box;
+    display: flex;
+
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Hanken Grotesk', sans-serif;
+    align-items: center;
+    height: 100vh;
+    min-height: 100vh;
+
+
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 31px 15px 60px -33px hsl(241, 100%, 89%);
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.mid_div {
+
+
+    text-align: center;
+}
+
+
+.summary_leftcard {
+
+    display: flex;
+
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 242px;
+    background: linear-gradient(var(--Light_slate_blue_background), var(--Light_royal_blue_background));
+    border-radius: 20px;
+
+}
+
+.summary_heading {
+    margin: 20px 0px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--Light_lavender);
+}
+
+.summary_indicator {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+
+    border-radius: 50%;
+
+    background: linear-gradient(var(--Violet_blue_circle), var(--Persian_blue_circle));
+}
+
+.summary_indicator div {
+    font-size: 50px;
+    font-weight: 800;
+    color: var(--White);
+
+}
+
+
+.summary_indicator span {
+    font-size: 12px;
+    color: var(--Light_lavender);
+}
+
+
+p {
+    font-size: 15px;
+    color: var(--Light_lavender);
+    font-family: 500;
+}
+
+.summary_indicator {
+    text-align: center;
+}
+
+.summary_info .tag {
+    font-weight: 500;
+    font-size: 26px;
+    margin: 15px 0px;
+    color: var(--White);
+}
+
+.Summary_right_card {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 280px;
+
+}
+
+.btn {
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    color: var(--White);
+    font-weight: bold;
+    background-color: var(--Dark_gray_blue);
+    transition: 0.2s all;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+    background-color: var(--Cobalt_blue);
+}
+
+#Summary_card {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#Summary_card .divsub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#Summary_card .divsub span:nth-of-type(1) {
+    display: flex;
+    gap: 5px;
+}
+
+.text_total {
+    color: #ccc !important;
+    font-weight: 500 !important;
+}
+
+#Summary_card .divsub span:nth-of-type(2) {
+    font-weight: 800;
+}
+
+
+h3 {
+    color: var(--Dark_gray_blue);
+}
+
+.divsub {
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.sub_0 {
+    background-color: var(--Light_red_bg);
+}
+
+.sub_1 {
+    background-color: var(--Orangey_yellow_bg);
+
+}
+
+.sub_2 {
+
+    background-color: var(--Green_teal_bg);
+}
+
+.sub_3 {
+
+    background-color: var(--Cobalt_blue_bg);
+}
+
+.sub_0 span:nth-of-type(1) {
+    color: var(--Light_red);
+
+}
+
+.sub_1 span:nth-of-type(1) {
+    color: var(--Orangey_yellow);
+
+}
+
+.sub_2 span:nth-of-type(1) {
+
+    color: var(--Green_teal);
+}
+
+.sub_3 span:nth-of-type(1) {
+
+    color: var(--Cobalt_blue);
+}
+
+
+@media (max-width:420px) {
+
+
+    main {
+        flex-direction: column;
+    }
+
+    #Summary_card {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        gap: 10px;
+    }
+
+    .summary_leftcard {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    .summary_leftcard,
+    .Summary_right_card {
+        width: 100%;
+
+    }
+}

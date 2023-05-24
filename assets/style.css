@@ -185,7 +185,8 @@ p {
 }
 
 
-h1 {
+h1{
+    font-size: 21px !important;
     color: var(--Dark_gray_blue);
 }
 
